@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+.pageBest .main_visual{
+  height: 350px;
+  margin-top: 3rem;
+}
+/* main_visual END */
+
+main{ /*임시*/
+  border: 2px solid black;
+  height: 3000px;
+}
+
+.pageBest .best_tab_box{
+  width: 1030px;
+  border: 1px solid var(--main-color);
+  background: #fff;
+  border-radius: 50px 50px 0 0;
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  top: 348px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pageBest .best_tab_box h2{
+  font-size: 3.6rem;
+  color: var(--sub2-color);
+  font-weight: bold;
+  padding: 4rem 0 2rem;
+}
+
+.pageBest .bestTabmenu ul{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.pageBest .bestTabmenu li{
+  border: 1px solid var(--main-color);
+  border-radius: 50px;
+
+}
+.pageBest .bestTabmenu a{
+  display: inline-block;
+  color: var(--main-color);
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+}
+
+.pageBest .bestTabmenu_sub ul{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 4rem 0;
+}
+.pageBest .bestTabmenu_sub li{}
+.pageBest .bestTabmenu_sub a{
+  color: var(--main-color);
+}
+/* textBox END */
+
+
+.pageBest .bestProduct{
+  margin-top: 21.4rem;
+}
+.bestProduct_top3{}
+.bestProduct_top3 ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.bestProduct_top3 li{}
+
+.bestProduct_menu{}
+.bestProduct_menu ul{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.bestProduct_menu li{}
+
+section{
+  border: 3px solid blue;
+}
