@@ -10,7 +10,9 @@ body{
   color: var(--black-color1);
   font-size: 1.6rem;
 }
-
+input{
+  box-sizing: border-box;
+}
 :root{
   --main-color:#A8B8A1;
   --sub1-color:#5F7A63;
@@ -74,6 +76,8 @@ button{
   height: 30px;
   float: right;
   position: relative;
+}
+.mobile{
   display: none;
 }
 
@@ -479,18 +483,44 @@ address p span{
 @media (max-width:1270px){ 
   /* header */
   .header_menu{
+    /* display: none; */
+    background: var(--sub2-color);
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    z-index: 1000;
+    transition: 0.6s ease-in;
+  }
+
+  .header_menu > ul{
+    padding: 50px;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .header_menu ul> li > a{
+    font-size: 1.8rem;
+  }
+  .login{
     display: none;
   }
   .h_info{
     gap: 55px;
   }
-  .login{
-    display: none;
-  }
   
   .ham_menu{
     display: block;
     background: url('../img/main/hamBtn_w.png')no-repeat center/contain;
+  }
+  .colse_btn{
+    display: block;
+    background: url('../img/main/close_btn.png')no-repeat center/contain;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 30px;
+    right: 50px;
   }
 
   /* Editor’s Pick */
