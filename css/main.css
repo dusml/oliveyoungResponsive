@@ -10,9 +10,7 @@ body{
   color: var(--black-color1);
   font-size: 1.6rem;
 }
-input{
-  box-sizing: border-box;
-}
+
 :root{
   --main-color:#A8B8A1;
   --sub1-color:#5F7A63;
@@ -69,14 +67,6 @@ button{
 }
 
 /* 모바일 */
-
-/* 햄버거 버튼 */
-.ham_menu{
-  width: 30px;
-  height: 30px;
-  float: right;
-  position: relative;
-}
 .mobile{
   display: none;
 }
@@ -151,7 +141,7 @@ header{
 
 .h_info{
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -481,47 +471,109 @@ address p span{
 /* 반응형 적용 */
 /* 1270보다 작을 때 */
 @media (max-width:1270px){ 
-  /* header */
-  .header_menu{
-    /* display: none; */
-    background: var(--sub2-color);
+  .pc{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+  .mobileMenueBg{
     position: fixed;
+    background: var(--sub2-color);
     top: 0;
     right: -50%;
     width: 50%;
     height: 100%;
-    z-index: 1000;
-    transition: 0.6s ease-in;
+    z-index: 999;
+    transition: 0.5s ease-in;
   }
 
-  .header_menu > ul{
-    padding: 50px;
-    flex-direction: column;
-    gap: 50px;
+  .colse_btn{
+    width: 24px;
+    height: 24px;
+    background: url('../img/main/close_btn.png') no-repeat center/contain;
+    position: absolute;
+    top: 3%;
+    right: 10%;
   }
-  .header_menu ul> li > a{
-    font-size: 1.8rem;
+
+  .mobileMenue ul{
+    margin: 10rem 0 0 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .mobileMenue li{
+    color: #fff;
+  }
+  .mobileMenue a{
+    font-size: 3rem;
+    display: inline-block;
+    padding: 20px 5px;
+  }
+
+  .mobileMenue a::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 1px;
+    background: var(--main-color);
+    margin-top: 0.5rem;
+    opacity: 0;
+    transition: .5s;
+  }
+  .mobileMenue a:hover{
+    color: var(--main-color);
+  }
+  .mobileMenue a:hover::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--main-color);
+    margin-top: 0.5rem;
+    opacity: 1;
+  }
+
+  .mobileLogin{
+    margin: 5rem 0 0 8rem;
+  }
+  .mobileLogin ul{
+    display: flex;
+  }
+  .mobileLogin li{
+    color: #fff;
+  }
+  .mobileLogin li + li::before{
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background: #fff;
+  margin: 0 1rem;
+}
+  .mobileLogin a{
+    font-size: 2rem;
+    padding: 5px;
+  }
+
+  /* header */
+  /* 햄버거 버튼 */
+  .ham_menu{
+    width: 30px;
+    height: 30px;
+    /* float: right; */
+    position: relative;
+    background: url('../img/main/hamBtn_w.png')no-repeat center/contain;
+  }
+  
+  .h_info{
+    gap: 55px;
   }
   .login{
     display: none;
   }
-  .h_info{
-    gap: 55px;
-  }
   
-  .ham_menu{
-    display: block;
-    background: url('../img/main/hamBtn_w.png')no-repeat center/contain;
-  }
-  .colse_btn{
-    display: block;
-    background: url('../img/main/close_btn.png')no-repeat center/contain;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 30px;
-    right: 50px;
-  }
 
   /* Editor’s Pick */
   .pageMain .editor article{
@@ -635,6 +687,31 @@ address p span{
 
 /* 826보다 작을 때 */
 @media (max-width:826px){
+  .colse_btn{
+    width: 20px;
+    height: 20px;
+  }
+
+  .mobileMenue ul{
+    margin: 10rem 0 0 6rem;
+    gap: 20px;
+  }
+  .mobileMenue a{
+    font-size: 2.4rem;
+  }
+
+  .mobileLogin{
+    margin: 5rem 0 0 6rem;
+  }
+  .mobileLogin li + li::before{
+    height: 14px;
+  }
+  .mobileLogin a{
+    font-size: 1.8rem;
+    padding: 5px;
+  }
+
+  /* 추춴 */
   .pageMain .editor article{
     flex-direction: column;
     gap: 1.5rem;
@@ -695,6 +772,27 @@ address p span{
 
 /* 768보다 작은 경우 */
 @media (max-width:769px){
+  .mobileMenue ul{
+    margin: 10rem 0 0 3rem;
+    width: 120px;
+  }
+  .mobileMenue a{
+    font-size: 2rem;
+  }
+
+  .mobileLogin{
+    margin: 5rem 0 0 3rem;
+    width: 120px;
+  }
+  .mobileLogin li + li::before{
+    height: 12px;
+    margin: 0 0.3rem;
+  }
+  .mobileLogin a{
+    font-size: 1.4rem;
+    padding: 5px;
+  }
+
   /* header */
   .header_inner h1 a{
     width: 150px;
@@ -717,10 +815,6 @@ address p span{
 
   .h_info{
     gap: 15px;
-  }
-
-  .header_menu ul> li > a{
-    font-size: 1.4rem;
   }
 
   /* 슬라이더 */
@@ -858,7 +952,7 @@ address p span{
 
   /* 슬라이더 */
   .main_slider {
-    margin-top: 0rem;
+    margin-top: 0px;
   }
   .slider_box strong {
     font-size: 2.4rem;
