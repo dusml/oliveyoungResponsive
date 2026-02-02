@@ -154,8 +154,7 @@ header{
   gap: 10px;
   background: #fff;
   border-radius: 50px;
-  width: 100%;
-  max-width:220px;
+  width: 220px;
   height: 35px;
   padding-left: 1rem;
 }
@@ -556,11 +555,6 @@ address p span{
   .mobileLogin a{
     font-size: 2rem;
     padding: 5px;
-  }
-  .header_search,
-  .footer_search
-  {
-    width: auto;
   }
 
   /* header */
@@ -980,4 +974,5 @@ address p span{
 
 
 }
+
 
