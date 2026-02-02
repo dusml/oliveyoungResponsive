@@ -557,6 +557,11 @@ address p span{
     font-size: 2rem;
     padding: 5px;
   }
+  .header_search,
+  .footer_search
+  {
+    width: auto;
+  }
 
   /* header */
   /* 햄버거 버튼 */
@@ -975,3 +980,4 @@ address p span{
 
 
 }
+
