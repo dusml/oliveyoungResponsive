@@ -10,3 +10,6 @@ hamBtn.onclick = function(){
 closeBtn.addEventListener('click',function(){
   headerNav.style.right = '-100%'
 })
+
+//모바일 서브 메뉴
+const subMenuBtn = document.querySelector('.mobileMenue .subMenu')
