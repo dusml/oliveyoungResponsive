@@ -87,7 +87,17 @@ input:focus{
 /* header */
 header{
   background: var(--main-color);
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 999999;
+  transition: 0.3s ease-in;
 }
+header.active{
+  transform: translateY(-70px);
+}
+
 .header_inner{
   height: 70px;
   display: flex;
@@ -110,13 +120,14 @@ header{
   background: url('../img/main/header_logo.png')no-repeat center/contain;
 }
 /* header nav */
-.header_menu ul{
+.header_menu > ul{
   display: flex;
   gap: 15px;
 }
 .header_menu li{
   color: #fff;
   height: 70px;
+  position: relative;
 }
 .header_menu a{
   display: block;
@@ -147,8 +158,22 @@ header{
   margin-top: 0.5rem;
   opacity: 1;
 }
+/* .header_menu subMenu */
+.header_menu .subMenu{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  background: rgba(168, 184, 161,0.9);
+  display: none;
+}
+
+.header_menu .subMenu.open{
+  display: block;
+}
 
 
+/* header의 오른쪽 부분 */
 .h_info{
   display: flex;
   gap: 10px;
@@ -205,25 +230,56 @@ header{
 
 /* slider슬라이더 */
 .main_slider{
-  margin-top: 3rem;
+  margin-top: 7rem;
   height: 450px;
   position: relative;
+  overflow: hidden; /*넘치는 부분안보이게*/
 }
 .slider_box{
   height: 100%;
-  
+  display: flex; /*옆으로 나열*/
+  transition: 0.7s ease-in;
 }
 .slider_box li{
+  flex-shrink: 0;
+  width: 100%;
   height: 100%;
-  background: url("../img/main/slider.jpg") no-repeat center/cover;
+  /*min-width: 100%; 100% 보다 작아지지 말아*/
+  background: url("../img/main/slider/slider_01.jpg") no-repeat center/cover;
   position: relative;
+}
+.slider_box li:nth-child(1){
+  background-image: url("../img/main/slider/slider_01.jpg");
+  color: #4F4909;
+}
+.slider_box li:nth-child(2){
+  background-image: url("../img/main/slider/slider_02.jpg");
+  color: #5a4d3a;
+  text-shadow: 0 0 2px #f3dcb9;
+  
+}
+.slider_box li:nth-child(3){
+  background-image: url("../img/main/slider/slider_03.jpg");
+  color: #fff;
+}
+.slider_box li:nth-child(4){
+  background-image: url("../img/main/slider/slider_04.jpg");
+  color: #130E08;
+}
+
+/* slider 텍스트 */
+.slider_txt{
+  text-align: left;
+  position: absolute;
+  left: 10vw;
+  top: 27%;
 }
 
 .s_txt_right{
   text-align: right;
   position: absolute;
-  right: 20vw;
-  top: 30%;
+  right: 10vw;
+  top: 27%;
 }
 .slider_box strong{
   font-size: 4.8rem;
@@ -240,10 +296,10 @@ header{
   transform: translateY(-50%);
   z-index: 2;
 }
-.main_slider button:nth-of-type(1){
+.main_slider .prev{
   left: 0;
 }
-.main_slider button:nth-of-type(2){
+.main_slider .next{
   right: 0;
 }
 /* slider END */
@@ -304,7 +360,7 @@ header{
 /* 이미지 + 상품 */
 .pageMain .bestProduct{
   margin-bottom: 1rem;
-  display: grid;
+  display: none;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
@@ -481,7 +537,8 @@ address p span{
   font-weight: 300;
 }
 
-/* 반응형 적용 */
+/* *****반응형 적용***** */
+
 /* 1270보다 작을 때 */
 @media (max-width:1270px){ 
   .pc{
@@ -497,7 +554,7 @@ address p span{
     right: -50%;
     width: 50%;
     height: 100%;
-    z-index: 999;
+    z-index: 9999999;
     transition: 0.5s ease-in;
   }
 
@@ -509,7 +566,6 @@ address p span{
     top: 3%;
     right: 10%;
   }
-
 
   .mobileMenue > ul{
     margin: 10rem 0 0 6rem;
@@ -549,11 +605,15 @@ address p span{
     opacity: 1;
   }
 
-  .subMenu{
+  .mobileMenue .subMenu{
     padding-left: 2rem;
-    /* display: none; */
     font-size: 16px;
+    display: none;
   }
+  .mobileMenue .subMenu.on{
+    display: block;
+  }
+
 
   .mobileLogin{
     margin: 4rem 0 0 6rem;
@@ -705,6 +765,7 @@ address p span{
   }
 }
 
+
 /* 826보다 작을 때 */
 @media (max-width:826px){
   .colse_btn{
@@ -712,7 +773,7 @@ address p span{
     height: 20px;
   }
 
-  .mobileMenue ul{
+  .mobileMenue > ul{
     margin: 10rem 0 0 6rem;
     gap: 20px;
   }
@@ -790,9 +851,11 @@ address p span{
   }
 }
 
+
+
 /* 768보다 작은 경우 */
 @media (max-width:769px){
-  .mobileMenue ul{
+  .mobileMenue > ul{
     margin: 6rem 0 0 3rem;
     width: 120px;
   }
@@ -972,7 +1035,7 @@ address p span{
 
   /* 슬라이더 */
   .main_slider {
-    margin-top: 0px;
+    margin-top: 7rem;
   }
   .slider_box strong {
     font-size: 2.4rem;
@@ -992,4 +1055,7 @@ address p span{
       font-size: 1.3rem;
     }
 
+    .more {
+      font-size: 12px;
+    }
 }

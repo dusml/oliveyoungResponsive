@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" href="img/fa.png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="script/main.js" defer></script>
 </head>
 <body class="pageMain">
@@ -20,7 +22,15 @@
           <nav class="header_menu pc">
             <ul>
               <li><a href="index.html">홈</a></li>
-              <li><a href="bestsub.html">BEST</a></li>
+              <li>
+                <a href="bestsub.html">BEST</a>
+                <ul class="subMenu">
+                  <li><a href="bestsub.html">스킨케어</a></li>
+                  <li><a href="bestsub.html">마스크팩</a></li>
+                  <li><a href="bestsub.html">클렌징</a></li>
+                  <li><a href="bestsub.html">선케어</a></li>
+                </ul>
+              </li>
               <li><a href="#">LUXE EDIT</a></li>
               <li><a href="#">Care Pick!</a></li>
             </ul>
@@ -55,7 +65,7 @@
         <ul>
           <li><a href="index.html">홈</a></li>
           <li>
-            <a href="bestsub.html">BEST</a>
+            <a href="#">BEST</a>
             <ul class="subMenu">
               <li><a href="bestsub.html">스킨케어</a></li>
               <li><a href="bestsub.html">마스크팩</a></li>
@@ -85,9 +95,27 @@
             <p>겨울 바람에도 흔들리지 않는 촉촉함</p>
           </div>
         </li>
+        <li>
+          <div class="slider_txt">
+            <strong>빛나는 순간, 한 방울</strong>
+            <p>하루 종일 빛나는 피부의 비밀</p>
+          </div>
+        </li>
+        <li>
+          <div class="slider_txt">
+            <strong>자연이 전하는 <br> 피부의 선물</strong>
+            <p>한정 기획전으로 만나는 촉촉한 하루</p>
+          </div>
+        </li>
+        <li>
+          <div class="slider_txt s_txt_right">
+            <strong>제주의 빛, 모공 속까지</strong>
+            <p>제주 자연에서 온 힘, 매끈하고 빛나는 피부</p>
+          </div>
+        </li>
       </ul>
-      <button><img src="img/main/arrow-left.png" alt="왼쪽버튼"></button>
-      <button><img src="img/main/arrow-right.png" alt="오른쪽버튼"></button>
+      <button class="prev"><img src="img/main/arrow-left.png" alt="왼쪽버튼"></button>
+      <button class="next"><img src="img/main/arrow-right.png" alt="오른쪽버튼"></button>
     </section>
     <!-- slider END -->
 
@@ -125,7 +153,7 @@
       <section class="best center">
         <h2 class="sectionTitle">Steencare Best Pick!</h2>
         <ul class="bestTabMenu">
-          <li class="active"><a href="#">스킨케어</a></li>
+          <li><a href="#">스킨케어</a></li>
           <li><a href="#">마스크팩</a></li>
           <li><a href="#">클렌징</a></li>
           <li><a href="#">선케어</a></li>
@@ -167,6 +195,123 @@
                 <div class="info">
                   <h4>에스크라</h4>
                   <p>[어워즈 1등 크림]에스트라 아토베리어365 크림 80ml</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="bestProduct">
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best2_1.png" alt="베스트 상품 이미지 2-1"></figure>
+                <div class="info">
+                  <h4>메디힐</h4>
+                  <p>[15년연속 1위] 메디힐 에센셜 마스크팩 10+1/10매 기획 7종</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best2_2.png" alt="베스트 상품 이미지 2-2"></figure>
+                <div class="info">
+                  <h4>메디힐</h4>
+                  <p>[1위패드/한정기획] 메디힐 더마 패드 100+100매 더블 기획 7종</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best2_3.png" alt="베스트 상품 이미지 2-3"></figure>
+                <div class="info">
+                  <h4>프리메라</h4>
+                  <p>[올영픽] 프리메라 PDRN-나이아10세럼 메가 샷 겔 마스크 4+1 기획/단품</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best2_4.png" alt="베스트 상품 이미지 2-4"></figure>
+                <div class="info">
+                  <h4>스킨푸드</h4>
+                  <p>[1+1/망곰 콜라보] 스킨푸드 패드 더블기획 3종(+망곰 얼굴파우치) (당근/감자/복숭아)</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="bestProduct">
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best3_1.png" alt="베스트 상품 이미지 1"></figure>
+                <div class="info">
+                  <h4>비플레인</h4>
+                  <p>[망곰 콜라보] 비플레인 녹두 약산성 클렌징폼 160ml 더블 기획 (+동전지갑)</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best3_2.png" alt="베스트 상품 이미지 2"></figure>
+                <div class="info">
+                  <h4>일소</h4>
+                  <p>[망곰 콜라보] 일소 슈퍼 멜팅 세범 소프트너 150ml 기획 (+딥 클린 마스터+화장솜 40매)</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best3_3.png" alt="베스트 상품 이미지 3"></figure>
+                <div class="info">
+                  <h4>바닐라코</h4>
+                  <p>[망곰 콜라보] 바닐라코 클린잇제로 클렌징밤 100ml 더블 기획 (+3ml*6ea+망곰 스마트톡)</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best3_4.png" alt="베스트 상품 이미지 4"></figure>
+                <div class="info">
+                  <h4>아누아</h4>
+                  <p>아누아 어성초 포어 컨트롤 클렌징오일 200ml 2입</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="bestProduct">
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best4_1.png" alt="베스트 상품 이미지 1"></figure>
+                <div class="info">
+                  <h4>구달</h4>
+                  <p>[화잘먹] 구달 맑은 어성초 진정 수분 선크림 50ml 1+1 기획 (+25ml 미니어처)</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best4_2.png" alt="베스트 상품 이미지 2"></figure>
+                <div class="info">
+                  <h4>라운드랩</h4>
+                  <p>[1등썬] 라운드랩 자작나무 수분 선크림 50ml(+클렌저 20ml 증정)</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best4_3.png" alt="베스트 상품 이미지 3"></figure>
+                <div class="info">
+                  <h4>달바</h4>
+                  <p>[생기톤업/스웨트프루프] 달바 핑크 톤업 선크림 듀오 기획 (50ml+50ml)</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure><img src="img/main/best/best4_4.png" alt="베스트 상품 이미지 4"></figure>
+                <div class="info">
+                  <h4>에스크라</h4>
+                  <p>(50%용량증정) 에스트라 더마UV365 장벽수분 무기자차 선크림 40ml+20ml 기획</p>
                 </div>
               </a>
             </li>
